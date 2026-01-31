@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/dashboard" element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="tasks">
