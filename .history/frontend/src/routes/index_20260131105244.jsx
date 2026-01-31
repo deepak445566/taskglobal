@@ -10,7 +10,9 @@ const AppRoutes = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Navigate to="/dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="tasks/:taskId" element={<TaskDetail />} />
+        <Route path="tasks">
+          <Route path=":taskId" element={<TaskDetail />} />
+        </Route>
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
     </Routes>
